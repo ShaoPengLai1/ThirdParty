@@ -35,7 +35,7 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/umeng_socialize_back_icon"
                 android:layout_marginLeft="15dp"
-                android:scaleType="center" />
+                android:contentDescription="TODO" android:scaleType="center" />
         </RelativeLayout>
 
         <TextView

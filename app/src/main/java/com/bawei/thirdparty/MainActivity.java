@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amap.api.maps.AMap;
+import com.amap.api.maps.MapView;
+import com.amap.api.maps.model.MyLocationStyle;
 import com.bumptech.glide.Glide;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMAuthListener;
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView icon,share;
     private TextView name;
+    MapView mMapView;
+    AMap aMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,19 @@ public class MainActivity extends AppCompatActivity {
         icon=findViewById(R.id.icon);
         share=findViewById(R.id.share);
         name=findViewById(R.id.name);
+        mMapView=findViewById(R.id.mapView);
+        mMapView.onCreate(savedInstanceState);
+
+        if (aMap == null) {
+            aMap = mMapView.getMap();
+        }
+        MyLocationStyle myLocationStyle;
+        myLocationStyle = new MyLocationStyle();
+        myLocationStyle.interval(2000);
+        aMap.setMyLocationStyle(myLocationStyle);
+
+        aMap.setMyLocationEnabled(true);
+
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -35,7 +35,7 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/umeng_socialize_back_icon"
                 android:clickable="false"
-                android:scaleType="center" />
+                android:contentDescription="TODO" android:scaleType="center" />
         </RelativeLayout>
 
         <TextView
@@ -64,7 +64,7 @@
         android:bufferType="spannable"
         android:gravity="top"
         android:hint="编辑分享内容"
-        android:lineSpacingExtra="3dp"
+        android:inputType="" android:lineSpacingExtra="3dp"
         android:paddingBottom="10dp"
         android:textColor="#000000"
         android:textSize="15sp" />
@@ -107,7 +107,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
            android:layout_centerInParent="true"
-            android:src="#2c3035" />
+            android:contentDescription="TODO" android:src="#2c3035" />
         </RelativeLayout>
     <TextView
         android:layout_width="280dp"
@@ -123,7 +123,7 @@
 
     <ImageView
         android:id="@+id/umeng_del"
-        android:layout_width="20dp"
+        android:layout_width="20dp" android:contentDescription="TODO" 
         android:layout_height="20dp"
         android:layout_alignRight="@id/umeng_image_edge"
         android:layout_alignTop="@id/umeng_image_edge"
